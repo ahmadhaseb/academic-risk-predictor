@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Academic AI Risk Predictor</title>
+    <!-- Force CSS refresh -->
+    <link rel="stylesheet" href="/Static/style.css?v=3.0">
+    <script src="/Static/script.js" defer></script>
+</head>
+<body>
+
+<div class="container">
+    <h2>Student Academic AI Risk Predictor</h2>
+
+    <div class="dashboard-layout">
+
+        <!-- LEFT SIDE: Form Section -->
+        <div class="form-section">
+            <form id="predictionForm">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="Age">Age</label>
+                        <input type="number" id="Age" value="20" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Gender">Gender</label>
+                        <select id="Gender">
+                            <option value="Male" selected>Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Non-Binary">Non-Binary</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Education_Level">Education Level</label>
+                        <select id="Education_Level">
+                            <option value="High School">High School</option>
+                            <option value="College">College</option>
+                            <option value="University" selected>University</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Daily_Social_Media_Hours">Daily Social Media Hours</label>
+                        <input type="number" id="Daily_Social_Media_Hours" value="3.5" step="0.1" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Daily_AI_Tool_Usage_Hours">Daily AI Tool Usage Hours</label>
+                        <input type="number" id="Daily_AI_Tool_Usage_Hours" value="2.0" step="0.1" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Sleep_Hours">Sleep Hours</label>
+                        <input type="number" id="Sleep_Hours" value="7.0" step="0.1" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Physical_Activity_Hours">Physical Activity Hours</label>
+                        <input type="number" id="Physical_Activity_Hours" value="1.0" step="0.1" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Mental_Health_Score">Mental Health Score (1-10)</label>
+                        <input type="number" id="Mental_Health_Score" value="6.0" step="0.1" min="1" max="10" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Physical_Health_Score">Physical Health Score (1-10)</label>
+                        <input type="number" id="Physical_Health_Score" value="7.0" step="0.1" min="1" max="10" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Social_Isolation_Score">Social Isolation Score (1-10)</label>
+                        <input type="number" id="Social_Isolation_Score" value="4.0" step="0.1" min="1" max="10" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Burnout_Level">Burnout Level</label>
+                        <select id="Burnout_Level">
+                            <option value="Low">Low</option>
+                            <option value="Moderate" selected>Moderate</option>
+                            <option value="High">High</option>
+                            <option value="Severe">Severe</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Academic_Performance_Score">Academic Performance Score (1-10)</label>
+                        <input type="number" id="Academic_Performance_Score" value="6.5" step="0.1" min="1" max="10" required>
+                    </div>
+                </div>
+
+                <button type="submit">ANALYZE RISK</button>
+            </form>
+        </div>
+
+        <!-- RIGHT SIDE: Result Panel -->
+        <div class="result-section">
+            <div id="result"></div>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>
