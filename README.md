@@ -26,7 +26,7 @@ An end-to-end Machine Learning web application that evaluates student demographi
 - **Backend:** Python 3, FastAPI, Uvicorn, Pydantic
 - **Machine Learning:** Scikit-Learn, Pandas, NumPy, Joblib
 - **Frontend:** HTML5, CSS3 (CSS Grid & Flexbox), Vanilla JavaScript (Fetch API)
-- **Deployment:** Railway, Git/GitHub
+- **Deployment:** Render, Git/GitHub
 
 ---
 
@@ -57,3 +57,62 @@ Follow these steps to run the application locally on your machine:
 ```bash
 git clone [https://github.com/YOUR_USERNAME/YOUR_REPOSITORY_NAME.git](https://github.com/YOUR_USERNAME/YOUR_REPOSITORY_NAME.git)
 cd YOUR_REPOSITORY_NAME
+2. Create and Activate Virtual Environment  
+Bash
+# Windows
+python -m venv venv
+venv\Scripts\activate
+
+# macOS / Linux
+python3 -m venv venv
+source venv/bin/activate
+3. Install Dependencies
+Bash
+pip install -r requirements.txt
+4. Launch Application
+Bash
+uvicorn app:app --reload
+Open http://127.0.0.1:8000 in your web browser to access the dashboard.
+
+📡 API Endpoint Overview
+Predict Academic Risk
+Endpoint: /predict
+
+Method: POST
+
+Content-Type: application/json
+
+Request Body Example:
+JSON
+{
+  "Age": 20,
+  "Gender": "Male",
+  "Education_Level": "University",
+  "Daily_Social_Media_Hours": 3.5,
+  "Daily_AI_Tool_Usage_Hours": 2.0,
+  "Sleep_Hours": 7.0,
+  "Physical_Activity_Hours": 1.0,
+  "Mental_Health_Score": 6.0,
+  "Physical_Health_Score": 7.0,
+  "Social_Isolation_Score": 4.0,
+  "Burnout_Level": "Moderate",
+  "Academic_Performance_Score": 6.5
+}
+Response Example:
+JSON
+{
+  "academic_failure_risk": 0,
+  "risk_probability": 2.0,
+  "status": "Safe Academic Standing"
+}
+📁 Project Directory Structure
+Plaintext
+├── static/
+│   ├── index.html       # Single-page dashboard interface
+│   ├── style.css        # Dashboard grid styles and layout
+│   └── script.js        # Dynamic API request & UI handlers
+├── app.py               # Main FastAPI server script
+├── model.joblib         # Serialized Machine Learning model
+├── Procfile             # Render web deployment configuration
+├── requirements.txt     # Python dependencies list
+└── README.md            # Project documentation
