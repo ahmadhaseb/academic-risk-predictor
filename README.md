@@ -1,13 +1,13 @@
 # 🎓 Student Academic Risk Predictor
 
-An end-to-end Machine Learning web application that evaluates student demographic, lifestyle, and mental well-being factors to predict academic failure risk in real-time. Built with a **FastAPI** backend and an interactive **CSS Grid Dashboard** featuring dynamic AI academic recommendations.
+An end-to-end Machine Learning web application that evaluates student demographic, lifestyle, and mental well-being factors to predict academic failure risk in real-time. Built with a **FastAPI** backend, deployed on **Vercel**, and featuring an interactive **CSS Grid Dashboard** with dynamic AI academic recommendations.
 
 ---
 
 ## 🚀 Live Demo
 
-- **Live Web App:** [https://academic-risk-predictor.onrender.com](https://academic-risk-predictor.onrender.com)
-- **API Documentation (Swagger UI):** [https://academic-risk-predictor.onrender.com/docs](https://academic-risk-predictor.onrender.com/docs)
+- **Live Web App:** [https://academicriskpredictor.vercel.app](https://academicriskpredictor.vercel.app)
+- **API Documentation (Swagger UI):** [https://academicriskpredictor.vercel.app/docs](https://academicriskpredictor.vercel.app/docs)
 
 ---
 
@@ -18,6 +18,7 @@ An end-to-end Machine Learning web application that evaluates student demographi
 - **Speedometer Risk Gauge:** Visual probability score rendering with color-coded risk indicators (Low vs. High Risk).
 - **Tailored AI Guidelines:** Actionable academic recommendations generated based on individual student risk profiles.
 - **RESTful FastAPI Architecture:** High-performance, fully validated API endpoints powered by Pydantic schemas.
+- **Serverless Vercel Deployment:** Fast, zero-card free hosting setup configured via serverless routes.
 
 ---
 
@@ -26,7 +27,7 @@ An end-to-end Machine Learning web application that evaluates student demographi
 - **Backend:** Python 3, FastAPI, Uvicorn, Pydantic
 - **Machine Learning:** Scikit-Learn, Pandas, NumPy, Joblib
 - **Frontend:** HTML5, CSS3 (CSS Grid & Flexbox), Vanilla JavaScript (Fetch API)
-- **Deployment:** Render, Git/GitHub
+- **Hosting & Deployment:** Vercel (Serverless Functions), Git/GitHub
 
 ---
 
@@ -112,7 +113,15 @@ Plaintext
 │   ├── style.css        # Dashboard grid styles and layout
 │   └── script.js        # Dynamic API request & UI handlers
 ├── app.py               # Main FastAPI server script
+├── vercel.json          # Vercel serverless build & routing configuration
 ├── model.joblib         # Serialized Machine Learning model
-├── Procfile             # Render web deployment configuration
 ├── requirements.txt     # Python dependencies list
 └── README.md            # Project documentation
+
+---
+
+### Terminal Commands (Git Update):
+```bash
+git add README.md
+git commit -m "Update README with Vercel deployment link"
+git push origin main
